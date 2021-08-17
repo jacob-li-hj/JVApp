@@ -1,6 +1,6 @@
 import React from 'react';
 import { LogBox } from 'react-native';
-import { ThemeProvider } from '@jv/ui-storybook-mobile-app'
+import { ThemeProvider } from '@jv/ui-storybook-mobile-app';
 import NavigationApp from './navigators/index';
 import ReactQueryProvider from '@providers/react-query-provider';
 

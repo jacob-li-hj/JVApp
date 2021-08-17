@@ -1,6 +1,6 @@
 import React from 'react';
 import { View, Button, Text, StyleSheet } from 'react-native';
-import { Box } from '@jv/ui-storybook-mobile-app/basic'
+import { Box } from '@jv/ui-storybook-mobile-app/basic';
 import useDemo from '@framework/demo/use-demo';
 
 const HomeScreen: React.FC<any> = ({ navigation }) => {
@@ -13,11 +13,11 @@ const HomeScreen: React.FC<any> = ({ navigation }) => {
 				bg="primary.400"
 				p={4}
 				_text={{
-					fontSize: "md",
-					fontWeight: "bold",
-					color: "white",
+					fontSize: 'md',
+					fontWeight: 'bold',
+					color: 'white',
 				}}
-				>
+			>
 				This is a Box
 			</Box>
 		</View>
