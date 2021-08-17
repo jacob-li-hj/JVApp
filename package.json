@@ -8,7 +8,9 @@
     "start": "react-native start",
     "test": "jest",
     "lint": "eslint .",
-    "prepare": "husky install"
+    "prepare": "husky install",
+    "tsc:check": "tsc --noEmit",
+    "precommit": "npm run tsc:check"
   },
   "dependencies": {
     "@react-navigation/drawer": "^6.1.3",

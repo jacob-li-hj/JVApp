@@ -8,17 +8,17 @@ export const queryKey = ['scan', 'code-info']
 const useAddToCart = () => {
   const mutation = useMutation(
     async ({ barcodes }: BarcodeAddToCartReq) => {
-      const { success, status, resp } = await fetchData<BarcodeAddToCartRes>({
+      const data = await fetchData<BarcodeAddToCartRes>({
         url: 'addItemsToCartAPI',
         method: 'POST',
         data: {
           barcodes
         }
       })
-      return { success: success && resp.success, status, resp }
+      return data
     },
     {
-      onSuccess: ({ success, resp }) => {
+      onSuccess: (data) => {
         // TODO
       }
     }
