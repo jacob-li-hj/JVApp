@@ -1,5 +1,5 @@
 interface Demo {
-  hello: string;
+	hello: string;
 }
 
-export type {Demo};
+export type { Demo };

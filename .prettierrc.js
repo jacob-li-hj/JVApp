@@ -1,7 +1,9 @@
+const { prettier } = require('@umijs/fabric');
+
 module.exports = {
-  bracketSpacing: false,
-  jsxBracketSameLine: true,
-  singleQuote: true,
-  trailingComma: 'all',
-  arrowParens: 'avoid',
+	...prettier,
+	tabWidth: 2,
+	semi: true,
+	singleQuote: true,
+	useTabs: true,
 };
