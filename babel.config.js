@@ -15,6 +15,10 @@ module.exports = {
           "rootPathSuffix": "app/framework/atg/graphql",
           "rootPathPrefix": "@framework"
         },
+        {
+          "rootPathSuffix": "app/hook",
+          "rootPathPrefix": "@ui-hook"
+        },
       ]
     }]
   ]

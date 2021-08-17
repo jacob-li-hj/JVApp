@@ -21,6 +21,8 @@
             "@rest":["framework/atg/rest/index"],
             "@framework/*":["framework/atg/graphql/*"],
             "@framework":["framework/atg/graphql/index"],
+            "@ui-hook/*":["hook/*"],
+            "@ui-hook":["hook/index"],
             "@providers/*":["providers/*"]
         }
     },
