@@ -6,7 +6,7 @@ import { useUI } from '@ui-hook';
 
 const HomeScreen: React.FC<any> = ({ navigation }) => {
 	const { data } = useDemo();
-	const [uiState] = useUI<[string, Function]>('uiState')
+	const [uiState] = useUI<[string, Function]>('uiState');
 	return (
 		<View style={styles.content}>
 			<Text>{data?.hello}</Text>

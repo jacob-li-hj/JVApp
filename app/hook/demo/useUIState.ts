@@ -1,3 +1,3 @@
-import React from 'react'
+import React from 'react';
 
-export const useUIState = () => React.useState('default UI State')
+export const useUIState = () => React.useState('default UI State');

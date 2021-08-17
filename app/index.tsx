@@ -3,7 +3,7 @@ import { LogBox } from 'react-native';
 import { ThemeProvider } from '@jv/ui-storybook-mobile-app';
 import NavigationApp from './navigators/index';
 import ReactQueryProvider from '@providers/react-query-provider';
-import { ManagedUIContext } from '@ui-hook'
+import { ManagedUIContext } from '@ui-hook';
 
 LogBox.ignoreLogs([
 	'Warning: BackAndroid is deprecated. Please use BackHandler instead.',
