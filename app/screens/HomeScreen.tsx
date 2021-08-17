@@ -1,6 +1,7 @@
 import React from 'react';
 import { View, Button, Text, StyleSheet } from 'react-native';
 import { Box } from '@jv/ui-storybook-mobile-app/basic';
+import { Icon } from '@jv/ui-storybook-mobile-app'
 import useDemo from '@framework/demo/use-demo';
 
 const HomeScreen: React.FC<any> = ({ navigation }) => {

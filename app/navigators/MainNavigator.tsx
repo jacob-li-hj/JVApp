@@ -1,4 +1,5 @@
 import React from 'react';
+import { Icon } from '@jv/ui-storybook-mobile-app'
 import { createDrawerNavigator } from '@react-navigation/drawer';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 
@@ -15,6 +16,9 @@ const BottomTabsScreen = () => (
 			component={NotificationsScreen}
 			options={{
 				tabBarLabel: 'Notifications',
+				tabBarIcon: ({color}) => (
+					<Icon name="Account" color={color} size={18} />
+				)
 			}}
 		/>
 		<BottomTabs.Screen
@@ -22,6 +26,9 @@ const BottomTabsScreen = () => (
 			component={InfoScreen}
 			options={{
 				tabBarLabel: 'InfoScreen',
+				tabBarIcon: ({color}) => (
+					<Icon name="Clock" color={color} size={18} />
+				)
 			}}
 		/>
 	</BottomTabs.Navigator>
