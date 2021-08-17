@@ -4,10 +4,6 @@ module.exports = {
     ["babel-plugin-root-import", {
       "paths":  [
         {
-          "rootPathSuffix": "app/configuration",
-          "rootPathPrefix": "@configuration"
-        },
-        {
           "rootPathSuffix": "app/framework/atg/rest",
           "rootPathPrefix": "@rest"
         },
@@ -18,6 +14,10 @@ module.exports = {
         {
           "rootPathSuffix": "app/providers",
           "rootPathPrefix": "@providers"
+        },
+        {
+          "rootPathSuffix": "app/framework/atg/graphql",
+          "rootPathPrefix": "@graphql"
         },
       ]
     }]

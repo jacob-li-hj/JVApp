@@ -1,0 +1,17 @@
+.eslintrc.js
+
+node_modules
+
+**/*.d.ts
+
+**/__tests__/*
+
+babel.config.js
+
+jest.config.js
+
+metro.config.js
+
+schema.js
+server.js
+index.js

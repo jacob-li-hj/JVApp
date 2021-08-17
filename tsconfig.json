@@ -15,12 +15,12 @@
         "skipLibCheck": true,
         "baseUrl": "./app",
         "paths": {
-            "@configuration/*":["configuration/*"],
-            "@configuration":["configuration/index"],
             "@commerce": ["framework/commerce"],
             "@commerce/*": ["framework/commerce/*"],
             "@rest/*":["framework/atg/rest/*"],
             "@rest":["framework/atg/rest/index"],
+            "@graphql/*":["framework/atg/graphql/*"],
+            "@graphql":["framework/atg/graphql/index"],
             "@providers/*":["providers/*"]
         }
     },

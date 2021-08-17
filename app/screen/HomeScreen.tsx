@@ -1,19 +1,26 @@
-import React from 'react'
-import { View, Button } from 'react-native'
-import { appConfig } from '@configuration';
-import useInfo from '@rest/mock/use-info'
+import React from 'react';
+import {View, Button, Text, StyleSheet} from 'react-native';
+import useDemo from '@graphql/demo/use-demo';
 
-const HomeScreen: React.FC<any> = ({ navigation }) => {
-    useInfo()
-    console.log('111111', appConfig)
-    return (
-        <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
-            <Button
-                onPress={() => navigation.navigate('Notifications')}
-                title={`Go to notifications ${appConfig}`}
-            />
-        </View>
-    );
+const HomeScreen: React.FC<any> = ({navigation}) => {
+  const {data} = useDemo();
+  return (
+    <View style={styles.content}>
+      <Text>{data?.hello}</Text>
+      <Button
+        onPress={() => navigation.navigate('Notifications')}
+        title={`Go to notifications`}
+      />
+    </View>
+  );
 };
 
-export default HomeScreen
+const styles = StyleSheet.create({
+  content: {
+    flex: 1,
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+});
+
+export default HomeScreen;

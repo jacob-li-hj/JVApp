@@ -1,8 +1,9 @@
-import React from 'react'
-import { createDrawerNavigator } from '@react-navigation/drawer'
+import React from 'react';
+import {createDrawerNavigator} from '@react-navigation/drawer';
 
-import { HomeScreen, NotificationsScreen } from '../screen'
-const Drawer = createDrawerNavigator()
+import {HomeScreen, NotificationsScreen} from '../screen';
+
+const Drawer = createDrawerNavigator();
 
 // const App = () => (
 //   <Drawer.Navigator
@@ -22,6 +23,6 @@ const MainNavigator = () => (
     <Drawer.Screen name="Home" component={HomeScreen} />
     <Drawer.Screen name="Notifications" component={NotificationsScreen} />
   </Drawer.Navigator>
-)
+);
 
-export default MainNavigator
+export default MainNavigator;
