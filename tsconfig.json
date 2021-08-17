@@ -2,15 +2,27 @@
     "compilerOptions": {
         "allowJs": true,
         "allowSyntheticDefaultImports": true,
+        "noImplicitAny": false,
         "esModuleInterop": true,
         "isolatedModules": true,
         "jsx": "react",
         "lib": ["es6"],
         "moduleResolution": "node",
+        "resolveJsonModule": true,
         "noEmit": true,
         "strict": true,
         "target": "esnext",
         "skipLibCheck": true,
+        "baseUrl": "./app",
+        "paths": {
+            "@configuration/*":["configuration/*"],
+            "@configuration":["configuration/index"],
+            "@commerce": ["framework/commerce"],
+            "@commerce/*": ["framework/commerce/*"],
+            "@rest/*":["framework/atg/rest/*"],
+            "@rest":["framework/atg/rest/index"],
+            "@providers/*":["providers/*"]
+        }
     },
     "include": [
         "./app/**/*"
