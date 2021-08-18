@@ -12,6 +12,8 @@ jest.config.js
 
 metro.config.js
 
+graphql-mock
+
 schema.js
 server.js
 index.js

@@ -1,5 +1,5 @@
-interface Demo {
-	hello: string;
+interface movie {
+	name: string;
 }
 
-export type { Demo };
+export type { movie };

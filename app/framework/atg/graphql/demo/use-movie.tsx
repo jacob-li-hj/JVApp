@@ -1,21 +1,23 @@
 import { useQuery } from 'react-query';
 import { gql } from 'graphql-request';
 import request from '@commerce/utils/graphql-request';
-import type { Demo } from '@commerce/types';
+import type { movie } from '@commerce/types';
 
 const query = gql`
 	{
-		hello
+		movie {
+			name
+		}
 	}
 `;
 
-const useDemo = () => {
+const useMovie = () => {
 	const endpoint = 'http://localhost:8000/graphql';
-	return useQuery<Demo>(
+	return useQuery<movie[]>(
 		'info',
-		async (): Promise<Demo> => {
+		async (): Promise<movie[]> => {
 			const data = await request(endpoint, query);
-			return data;
+			return data.movie;
 		},
 		{
 			refetchOnWindowFocus: false,
@@ -23,4 +25,4 @@ const useDemo = () => {
 	);
 };
 
-export default useDemo;
+export default useMovie;

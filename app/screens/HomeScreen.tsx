@@ -1,12 +1,15 @@
-import React from 'react';
-import { View, Button, Text, StyleSheet } from 'react-native';
+import React, { useState } from 'react';
+import { View, StyleSheet } from 'react-native';
 import TouchID from 'react-native-touch-id';
-import { Box } from '@jv/ui-storybook-mobile-app/basic';
-import useDemo from '@framework/demo/use-demo';
+import { HStack, Input, Text, Button } from '@jv/ui-storybook-mobile-app/basic';
+import useMovie from '@framework/demo/use-movie';
+import useAddMovie from '@framework/demo/use-add-movie';
 import { useUI } from '@ui-hook';
 
 const HomeScreen: React.FC<any> = ({ navigation }) => {
-	const { data } = useDemo();
+	const { data = [] } = useMovie();
+	const [inputText, setInputText] = useState<string>('');
+	const mutation = useAddMovie();
 	const [uiState] = useUI('uiState');
 
 	const checkTouchId = () => {
@@ -22,23 +25,23 @@ const HomeScreen: React.FC<any> = ({ navigation }) => {
 			});
 	};
 
+	const addMovie = () => {
+		mutation.mutate({ name: inputText });
+	};
+
 	return (
 		<View style={styles.content}>
-			<Text>{data?.hello}</Text>
+			{/* <Text>{data?.hello}</Text> */}
 			<Text>{uiState}</Text>
-			<Button onPress={checkTouchId} title={`TouchID`} />
-			<Button onPress={() => navigation.navigate('Notifications')} title={`Go to notifications`} />
-			<Box
-				bg="primary.400"
-				p={4}
-				_text={{
-					fontSize: 'md',
-					fontWeight: 'bold',
-					color: 'white',
-				}}
-			>
-				This is a Box
-			</Box>
+			<Button onPress={checkTouchId}>TouchID</Button>
+			<Button onPress={() => navigation.navigate('Notifications')}>Go to notifications</Button>
+			<HStack>
+				<Input flex={1} onChangeText={setInputText} />
+				<Button onPress={addMovie}>add movie</Button>
+			</HStack>
+			{data.map((item, index) => (
+				<Text key={`${item.name}-${index}`}>{item.name}</Text>
+			))}
 		</View>
 	);
 };
